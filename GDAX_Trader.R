@@ -40,7 +40,7 @@ curr_rsi14_api <- function(x){
   df <- rgdax::public_candles(product_id = "ETH-USD",
                               granularity = 900)
   rsi_gdax <- tail(TTR::RSI(df[,5],
-                            n = 14),
+                            n = 20),
                    n = 1)
   rsi_gdax
 }
